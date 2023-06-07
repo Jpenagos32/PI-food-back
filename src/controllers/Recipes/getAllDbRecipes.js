@@ -14,7 +14,7 @@ const getAllDbRecipes = async () => {
 			include: { model: Diet },
 		});
 
-		return await response?.map((res) => {
+		return response?.map((res) => {
 			return {
 				id: res.dataValues.id,
 				title: res.dataValues.title,
